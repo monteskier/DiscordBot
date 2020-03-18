@@ -18,7 +18,7 @@ async def on_ready():
             break
 
     print(
-        f'{client.user} is connected to the following guild:\n'
+        f'{client.user} is connected to the following guild:'
         f'{guild.name}(id: {guild.id})'
     )
 
@@ -36,17 +36,7 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-     sol = [
-        (
-            'Possiblement el problema es que no cliques el enllaç del llamp. Alla veuras els desplegables per fer cont+alt+sup',
-        ),
-        (
-            '',
-        ),
-        (
-            '',
-        ),
-    ]
+    sol = ['Possiblement el problema es que no cliques el enllaç del llamp. Alla veuras els desplegables per fer cont+alt+sup']
     patron = re.compile(r'\bloqueig\b')
     if patron.match(message.content) != None:
         response = random.choice(sol[0])
